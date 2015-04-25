@@ -1,26 +1,26 @@
 package main.log.console;
 
-import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.PrintStream;
 
 import main.log.console.gui.ConsoleArea;
 
-
-public class ConsoleStream extends BufferedOutputStream {
+public class ConsoleStream extends PrintStream {
 	
-	private ConsoleArea area = new ConsoleArea();
+	private static ConsoleArea ca = new ConsoleArea();
 	
-	private static OutputStream str = new OutputStream() {
+	private static OutputStream os = new OutputStream() {
 
 		@Override
 		public void write(int b) throws IOException {
-			
-		}};
+			ca.append(String.valueOf((char) b));
+		}
+		
+	};
 
 	public ConsoleStream() {
-		super(str);
+		super(os);
 	}
-
-
+	
 }
