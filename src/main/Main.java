@@ -25,7 +25,7 @@ public class Main {
 				
 				javax.swing.SwingUtilities.invokeLater(new Runnable() {
 		            public void run() {
-		                ConsoleWindow.createAndShowGUI();
+		                new ConsoleWindow();
 		            }
 		        });
 				
