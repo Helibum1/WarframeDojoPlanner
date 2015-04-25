@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import main.log.Log;
+import main.objects.RenderObject;
 
 public class Planner implements Runnable {
 	

@@ -12,8 +12,8 @@ import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-import main.RenderObject;
 import main.log.Log;
+import main.objects.RenderObject;
 
 @SuppressWarnings("serial")
 public class Canvas extends JPanel {
