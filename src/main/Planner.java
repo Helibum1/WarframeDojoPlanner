@@ -56,8 +56,6 @@ public class Planner implements Runnable {
 			// Update the input state.
 			inputHandler.updatedReleasedKeys();
 			
-			Log.warning("asdfasdf");
-			
 			// Delay the next action (iteration of the loop).
 			try {
 				Thread.sleep((long) (1000.0f/ACTIONS_PER_SECOND));
