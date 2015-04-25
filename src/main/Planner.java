@@ -5,6 +5,7 @@ import java.util.Set;
 
 import main.log.Log;
 import main.objects.RenderObject;
+import main.InputHandler;
 
 public class Planner implements Runnable {
 	
@@ -24,6 +25,9 @@ public class Planner implements Runnable {
 	}
 
 	private final static Set<RenderObject> objectsToRemove = new HashSet<RenderObject>();
+	
+	/** The handler that should receive the user input. */
+	private final InputHandler inputHandler = new InputHandler();
 
 	public Planner() {
 		
@@ -50,7 +54,7 @@ public class Planner implements Runnable {
 			objectsToRemove.clear();
 			
 			// Update the input state.
-			//inputHandler.updatedReleasedKeys();
+			inputHandler.updatedReleasedKeys();
 			
 			// Delay the next action (iteration of the loop).
 			try {
