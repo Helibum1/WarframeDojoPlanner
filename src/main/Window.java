@@ -12,20 +12,9 @@ import main.log.Log;
 @SuppressWarnings("serial")
 public class Window extends JFrame {
 
-	/*
-	 * This variable stores the title of the game. As it will not change at
-	 * runtime, we defined it as "final", meaning that it _cannot_ be modified.
-	 */
 	public static final String TITLE = "Warframe Dojo Builder";
 
-	/*
-	 * This is the constructor of the class. Every object that is created with a
-	 * " new ..." command is created with a constructor, which is executed once
-	 * during the creation of the object.
-	 * 
-	 * NOTE: Constructors do not have a return type, since they "implicitly"
-	 * return the object that was created.
-	 */
+
 	public Window(Planner planner) {
 
 		// Set the title of the JFrame (swing function).
