@@ -67,7 +67,7 @@ public class Window extends JFrame {
 			
 			@Override
 			public boolean dispatchKeyEvent(KeyEvent e) {
-				//planner.getInputHandler().handleKeyEvent(e);
+				planner.getInputHandler().handleKeyEvent(e);
 				return false;
 			}
 		});

@@ -76,4 +76,8 @@ public class Planner implements Runnable {
 		return objectsToRender;
 	}
 
+	public InputHandler getInputHandler() {
+		return inputHandler;
+	}
+	
 }
