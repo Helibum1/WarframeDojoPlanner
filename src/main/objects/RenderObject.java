@@ -1,5 +1,7 @@
 package main.objects;
 
+import java.awt.Graphics;
+
 import main.Canvas;
 
 /**
@@ -19,5 +21,13 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 	 * the object will be drawn
 	 */
 	protected int zIndex;
+	
+	/** Updates the object to be rendered, forcing it into it's latest state.
+	 */
+	public abstract void update(Runnable r);
+	
+	/** Renders an image, which will be drawn onto the grid.
+	 */
+	public abstract void renderInternal(Graphics g);
 
 }
