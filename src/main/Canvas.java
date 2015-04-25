@@ -63,7 +63,7 @@ public class Canvas extends JPanel {
 
 		// Get all objects, and sort them according to their zIndex.
 		List<RenderObject> plannerObjects = new ArrayList<RenderObject>(planner.getObjectsToRender());
-		Collections.sort(plannerObjects);
+	Collections.sort(plannerObjects);
 		
 		// Render all objects.
 		for (RenderObject object : plannerObjects) {
