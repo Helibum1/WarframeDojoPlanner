@@ -3,6 +3,7 @@ package main;
 import java.awt.EventQueue;
 
 import main.Window;
+import main.log.console.ConsoleWindow;
 
 public class Main {
 
@@ -21,6 +22,12 @@ public class Main {
 			// should execute.
 			@Override
 			public void run() {
+				
+				javax.swing.SwingUtilities.invokeLater(new Runnable() {
+		            public void run() {
+		                ConsoleWindow.createAndShowGUI();
+		            }
+		        });
 				
 				// Create the Game object.
 				Planner planner = new Planner();
