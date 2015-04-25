@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import main.Canvas;
+import main.Planner;
 
 /**
  * This class can be extended by classes that can render themselves on the
@@ -42,6 +43,15 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 		this.x = x;
 		this.y = y;
 		this.zIndex = zIndex;
+	}
+	
+	/**
+	 * Update this object based on the current user input.
+	 * 
+	 * @param game The current game in which this object is.
+	 */
+	public void update(Planner planner) {
+		
 	}
 
 	/** Checks if this equals an object
@@ -115,34 +125,69 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 		return zIndex - o.zIndex;
 	}
 
+	/** Gets the x-coordinate of the object
+	 * 
+	 * @return the x-coordinate of the object
+	 */
 	public int getX() {
 		return x;
 	}
 
+	/** Sets the x-coordinate of the object
+	 * 
+	 * @param x
+	 * 			The new x-coordinate of the object
+	 */
 	public void setX(int x) {
 		this.x = x;
 	}
 
+	/** Gets the y-coordinate of the object
+	 * 
+	 * @return The y-coordinate of the object
+	 */
 	public int getY() {
 		return y;
 	}
 
+	/** Sets the y-coordinate of the object
+	 * 
+	 * @param y
+	 * 			The new y-coordinate of the object
+	 */
 	public void setY(int y) {
 		this.y = y;
 	}
 
+	/** Gets the zIndex of the object
+	 * 
+	 * @return The zIndex of the object
+	 */
 	public int getzIndex() {
 		return zIndex;
 	}
 
+	/** Sets the zIndex of the object
+	 * 
+	 * @param zIndex
+	 * 			The new zIndex of the object
+	 */
 	public void setzIndex(int zIndex) {
 		this.zIndex = zIndex;
 	}
 
+	/** Gets the type of the object
+	 * 
+	 * @return The type of the object
+	 */
 	public String getType() {
 		return null;
 	}
 	
+	/** Gets the Set-Object
+	 * 
+	 * @return This
+	 */
 	public Object getSet() {
 		return this;
 	}
