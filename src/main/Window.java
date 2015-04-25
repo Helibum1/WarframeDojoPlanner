@@ -16,7 +16,7 @@ public class Window extends JFrame {
 	 * This variable stores the title of the game. As it will not change at
 	 * runtime, we defined it as "final", meaning that it _cannot_ be modified.
 	 */
-	public static final String GAME_TITLE = "Warframe Dojo Builder";
+	public static final String TITLE = "Warframe Dojo Builder";
 
 	/*
 	 * This is the constructor of the class. Every object that is created with a
@@ -29,7 +29,7 @@ public class Window extends JFrame {
 	public Window(Planner planner) {
 
 		// Set the title of the JFrame (swing function).
-		setTitle(GAME_TITLE);
+		setTitle(TITLE);
 
 		// Specify what should happen when the close button is clicked (Swing
 		// function). 
