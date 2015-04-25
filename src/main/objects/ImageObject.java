@@ -37,7 +37,7 @@ public class ImageObject extends RenderObject {
 	public ImageObject(int x, int y, int zIndex, boolean collision, String filename) {
 		
 		// Call the constructor of the parent class.
-		super(x, y, zIndex, collision);
+		super(x, y, zIndex);
 		
 		// Check if the provided file name makes sense.
 		if (filename == null) {
@@ -77,18 +77,6 @@ public class ImageObject extends RenderObject {
 	public int compareTo(RenderObject o) {
 		// TODO Auto-generated method stub
 		return 0;
-	}
-
-	@Override
-	public void update(Runnable r) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void renderInternal(Graphics g) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
