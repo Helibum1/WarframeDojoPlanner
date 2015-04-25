@@ -1,5 +1,7 @@
 package main.log.console.gui;
 
+import java.awt.Color;
+
 import javax.swing.JTextArea;
 
 public class ConsoleArea extends JTextArea {
@@ -7,6 +9,7 @@ public class ConsoleArea extends JTextArea {
 	
 	public ConsoleArea() {
 		super.setEditable(false);
+		super.setBackground(Color.DARK_GRAY);
 	}
 	
 	@Override

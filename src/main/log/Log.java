@@ -1,5 +1,7 @@
 package main.log;
 
+import java.awt.Color;
+
 import main.log.console.ConsoleStream;
 
 public class Log {
@@ -10,7 +12,7 @@ public class Log {
 
 	private static Level CURRENT_LEVEL = Level.INFO;
 	
-	private static final ConsoleStream cs = new ConsoleStream();
+	public static final ConsoleStream cs = new ConsoleStream();
 	
 	/**
 	 * Set the level of this logger.
@@ -35,7 +37,16 @@ public class Log {
 	public static void log(Level level, String message) {
 		
 		if (CURRENT_LEVEL.ordinal() <= level.ordinal()) {
-			cs.println(message);
+			switch (level) {
+			
+			case ERROR:ConsoleStream.output(message,Color.RED); break;
+			
+			case WARNING:ConsoleStream.output(message,Color.YELLOW); break;
+			
+			case INFO:ConsoleStream.output(message,Color.WHITE); break;
+			
+			default:ConsoleStream.output(message,Color.WHITE); break;
+			}
 		}
 	}
 	

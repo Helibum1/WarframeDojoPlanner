@@ -1,5 +1,6 @@
 package main.log.console;
 
+import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
@@ -28,7 +29,7 @@ public class ConsoleWindow extends JFrame {
 		}
 		pack();
 		setVisible(true);
-		Log.info("Console GUI loaded sucessfully.");
+		Log.warning("Console GUI loaded sucessfully.");
 	}
 	
 }

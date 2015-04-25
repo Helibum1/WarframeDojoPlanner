@@ -1,9 +1,11 @@
 package main.log.console;
 
+import java.awt.Color;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
+import main.log.Log;
 import main.log.console.gui.ConsoleArea;
 
 public class ConsoleStream extends PrintStream {
@@ -19,6 +21,11 @@ public class ConsoleStream extends PrintStream {
 		
 	};
 
+	public static void output(String msg, Color color) {
+		ca.setForeground(color);
+		Log.cs.println(msg);
+	}
+	
 	public ConsoleStream() {
 		super(os);
 	}
