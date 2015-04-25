@@ -23,4 +23,8 @@ public class ConsoleStream extends PrintStream {
 		super(os);
 	}
 	
+	public ConsoleArea getConsoleArea() {
+		return ca;
+	}
+	
 }
