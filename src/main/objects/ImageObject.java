@@ -8,7 +8,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 
-import ch.ksimlee.it.spaceinvaders.log.Log;
+import main.log.Log;
 
 /**
  * {@link ImageObject}s are used to represent objects that render an image from
