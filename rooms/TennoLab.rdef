@@ -1,9 +1,0 @@
-name:Tenno Lab
-texture:research\ResearchTenno.png
-doors:49,166
-costs:credits 1000,salvage 650,circuits 350,polymerbundle 350,forma 1,space 2,energy 5
-shadow:forma 1
-storm:forma 2
-mountain:forma 5
-moon:forma 15
-deco-cap:15
