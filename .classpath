@@ -2,6 +2,5 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/jsyntaxpane-0.9.5-b29.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
