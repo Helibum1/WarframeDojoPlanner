@@ -9,9 +9,11 @@ public class Planner implements Runnable {
 	
 	/** The handler that should receive the user input. */
 	private final InputHandler inputHandler = new InputHandler();
+	
+	private static Config cfg;
 
 	public Planner() {
-		
+		cfg = new Config();
 		
 	}
 	
@@ -44,6 +46,10 @@ public class Planner implements Runnable {
 
 	public InputHandler getInputHandler() {
 		return inputHandler;
+	}
+	
+	public Config getConfig() {
+		return cfg;
 	}
 	
 }
