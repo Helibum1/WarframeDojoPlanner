@@ -8,6 +8,7 @@ import javax.swing.JScrollPane;
 import main.log.Log;
 import main.log.console.gui.ConsoleArea;
 
+@SuppressWarnings("serial")
 public class ConsoleWindow extends JFrame {
 	
 	public ConsoleWindow() {

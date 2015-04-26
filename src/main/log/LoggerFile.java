@@ -26,7 +26,7 @@ public class LoggerFile {
 		   	try {
 				outfile.write(ca.getText());
 			} catch (IOException e) {
-				e.printStackTrace();
+				e.printStackTrace(Log.cs);
 			}
 		    outfile.close();
 		}
