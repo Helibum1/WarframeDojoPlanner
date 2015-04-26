@@ -13,7 +13,7 @@ public class ConsoleArea extends JTextArea {
 	public ConsoleArea() {
 		super.setEditable(false);
 		ConsoleArea ca = this;
-		this.ca = ca;
+		ConsoleArea.ca = ca;
 	}
 	
 	@Override
