@@ -10,10 +10,10 @@ import main.log.console.ConsoleStream;
 public class Log {
 	
 	public enum Level {
-		DEBUG, INFO, WARNING, ERROR
+		FINEST, DEBUG, INFO, WARNING, ERROR
 	}
 
-	private static Level CURRENT_LEVEL = Level.INFO;
+	private static Level CURRENT_LEVEL = Level.DEBUG;
 	
 	private static Date date = new Date();
 	
@@ -96,6 +96,16 @@ public class Log {
 	 */
 	public static void debug(String message) {
 		log(Level.DEBUG, "[DEBUG][" + format.format(date).split(" ")[1] + "]" + message);
+	}
+	
+	/**
+	 * Convenience function to log error messages. This message is logged if the
+	 * logger is set to error or lower.
+	 *
+	 * @param message	The message to log.
+	 */
+	public static void finest(String message) {
+		log(Level.FINEST, "[FINEST][" + format.format(date).split(" ")[1] + "]" + message);
 	}
 	
 }
