@@ -21,10 +21,10 @@ public class ConsoleStream extends PrintStream {
 		
 	};
 
-	public static void output(String msg, Color color) {
-		ca.setForeground(color);
+	/**public static void output(String msg, Color color) {
+		ca.setCaretColor(color);
 		Log.cs.println(msg);
-	}
+	}*/
 	
 	public ConsoleStream() {
 		super(os);

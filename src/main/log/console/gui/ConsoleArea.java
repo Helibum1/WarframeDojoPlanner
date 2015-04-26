@@ -9,7 +9,6 @@ public class ConsoleArea extends JTextArea {
 	
 	public ConsoleArea() {
 		super.setEditable(false);
-		super.setBackground(Color.DARK_GRAY);
 	}
 	
 	@Override

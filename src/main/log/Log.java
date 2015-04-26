@@ -37,7 +37,8 @@ public class Log {
 	public static void log(Level level, String message) {
 		
 		if (CURRENT_LEVEL.ordinal() <= level.ordinal()) {
-			switch (level) {
+			cs.println(message);
+			/**switch (level) {
 			
 			case ERROR:ConsoleStream.output(message,Color.RED); break;
 			
@@ -46,7 +47,7 @@ public class Log {
 			case INFO:ConsoleStream.output(message,Color.WHITE); break;
 			
 			default:ConsoleStream.output(message,Color.WHITE); break;
-			}
+			}*/
 		}
 	}
 	
