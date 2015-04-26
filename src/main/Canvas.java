@@ -5,15 +5,11 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
 import main.log.Log;
-import main.objects.RenderObject;
 
 @SuppressWarnings("serial")
 public class Canvas extends JPanel {
@@ -60,15 +56,6 @@ public class Canvas extends JPanel {
 		// Draw a rectangle with the size of the canvas. Therefore, this draws a
 		// "background".
 		g.fillRect(0, 0, SIZE.width, SIZE.height);
-
-		// Get all objects, and sort them according to their zIndex.
-		List<RenderObject> plannerObjects = new ArrayList<RenderObject>(planner.getObjectsToRender());
-	Collections.sort(plannerObjects);
-		
-		// Render all objects.
-		for (RenderObject object : plannerObjects) {
-			object.renderInternal(g);
-		}
 		
 	}
 	
