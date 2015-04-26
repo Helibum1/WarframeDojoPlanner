@@ -22,12 +22,12 @@ public class Room {
 	
 	
 	public Room(String identifyer) {
-		setProperties(Loader.getProperties(identifyer));
 		costs.put("ghost", new HashMap<Material, Integer>());
 		costs.put("shadow", new HashMap<Material, Integer>());
 		costs.put("storm", new HashMap<Material, Integer>());
 		costs.put("mountain", new HashMap<Material, Integer>());
 		costs.put("moon", new HashMap<Material, Integer>());
+		setProperties(Loader.getProperties(identifyer));
 	}
 
 	void setProperties(String[] properties) {
