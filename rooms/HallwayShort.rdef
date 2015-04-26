@@ -1,5 +1,5 @@
 name:Short Hallway
-texture:research\ResearchTenno.png
+texture:hallway\HallwayShort.png
 doors:49,166
 costs:credits 500,salvage 650,ferrite 350,nanoSpores 1200,forma 1,space 1,energy 1
 shadow:forma 1

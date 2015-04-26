@@ -1,5 +1,5 @@
 name:Obstacle Course
-texture:research\ResearchTenno.png
+texture:utility\UtilityObstacleCourse.png
 doors:49,166
 costs:credits 1000,alloyPlate 650,ferrite 400,rubedo 1200,forma 1,space 10,energy 10
 shadow:forma 1

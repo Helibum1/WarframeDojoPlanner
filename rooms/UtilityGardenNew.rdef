@@ -1,5 +1,5 @@
 name:Large Garden
-texture:research\ResearchTenno.png
+texture:utility\UtilityGardenNew.png
 doors:49,166
 costs:credits 1000,salvage 850,ferrite 750,nanoSpores 2500,forma 1,space 15,energy 8
 shadow:forma 1

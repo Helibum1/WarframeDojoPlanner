@@ -1,5 +1,5 @@
 name:Reactor
-texture:research\ResearchTenno.png
+texture:utility\UtilityReactor.png
 doors:49,166
 costs:credits 500,salvage 650,circuits 350,alloyPlate 150,forma 1,space 2,energy 5
 shadow:forma 1
