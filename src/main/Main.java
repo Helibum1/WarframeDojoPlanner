@@ -1,8 +1,10 @@
 package main;
 
 import java.awt.EventQueue;
+import java.io.IOException;
 
 import main.log.console.ConsoleWindow;
+import main.log.console.gui.ConsoleArea;
 import main.objects.components.Room;
 
 public class Main {
@@ -41,6 +43,17 @@ public class Main {
 				new Thread(planner).start();
 			}
   });
+		final Thread mainThread = Thread.currentThread();
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+		    public void run() {
+		    	try {
+					ConsoleArea.save();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		    }
+		});
     }
 
 }

@@ -1,12 +1,19 @@
 package main.log.console.gui;
 
+import java.io.IOException;
+
 import javax.swing.JTextArea;
+
+import main.log.LoggerFile;
 
 public class ConsoleArea extends JTextArea {
 	private static final long serialVersionUID = 5063354137396740677L;
+	private static ConsoleArea ca;
 	
 	public ConsoleArea() {
 		super.setEditable(false);
+		ConsoleArea ca = this;
+		this.ca = ca;
 	}
 	
 	@Override
@@ -14,8 +21,8 @@ public class ConsoleArea extends JTextArea {
 		
 	}
 	
-	public void save() {
-		
+	public static void save() throws IOException {
+		LoggerFile.saveLog(ca, "log");
 	}
 	
 }
