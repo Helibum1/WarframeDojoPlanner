@@ -6,7 +6,6 @@ import java.io.IOException;
 import main.log.Log;
 import main.log.console.ConsoleWindow;
 import main.log.console.gui.ConsoleArea;
-import main.objects.components.Room;
 
 public class Main {
 

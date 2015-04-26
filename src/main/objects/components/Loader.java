@@ -18,7 +18,7 @@ public class Loader {
 			}
 			r.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			e.printStackTrace(Log.cs);
 		}
 		return tmp.split("\n");
 	}

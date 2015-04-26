@@ -42,7 +42,7 @@ public class Planner implements Runnable {
 				// We were interrupted, exit the application loop.
 				
 				Log.error("Caught interruption exception, exiting application loop.");
-				e.printStackTrace();
+				e.printStackTrace(Log.cs);
 				break;
 			}
 			
