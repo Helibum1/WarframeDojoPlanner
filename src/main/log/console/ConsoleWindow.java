@@ -28,7 +28,7 @@ public class ConsoleWindow extends JFrame {
 		}
 		pack();
 		setVisible(true);
-		Log.warning("Console GUI loaded sucessfully.");
+		Log.info("Console GUI loaded sucessfully.");
 	}
 	
 }

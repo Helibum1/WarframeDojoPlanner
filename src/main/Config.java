@@ -17,9 +17,9 @@ public class Config {
 	
 	private HashMap<String, HashMap<String, Object>> configs;
 	
-	private XStream xstream = new XStream(new StaxDriver());
+	private XStream xstream = new XStream();
 	
-	private File cfgfile = new File("config.cfg");
+	private File cfgfile = new File("config.xml");
 	
 	public Config() {
 		configs = new HashMap<String, HashMap<String, Object>>();
@@ -71,7 +71,7 @@ public class Config {
 				cfgfile.createNewFile();
 			}
 			xstream.toXML(configs, new FileOutputStream(cfgfile));
-			Log.debug("Configuration was saved sucessfully.");
+			Log.info("Configuration was saved sucessfully.");
 		} catch (IOException  e) {
 			e.printStackTrace(Log.cs);
 		}
