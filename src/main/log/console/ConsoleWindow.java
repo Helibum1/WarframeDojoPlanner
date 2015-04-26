@@ -9,6 +9,7 @@ import javax.swing.JScrollPane;
 
 import main.log.Log;
 import main.log.console.gui.ConsoleArea;
+import main.objects.components.Loader;
 
 public class ConsoleWindow extends JFrame {
 	

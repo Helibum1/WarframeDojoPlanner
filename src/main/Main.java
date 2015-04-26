@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import main.Window;
 import main.log.console.ConsoleWindow;
+import main.objects.components.Loader;
 
 public class Main {
 
@@ -28,6 +29,7 @@ public class Main {
 		                new ConsoleWindow();
 		            }
 		        });
+				
 				
 				// Create the Game object.
 				Planner planner = new Planner();
