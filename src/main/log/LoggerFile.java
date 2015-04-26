@@ -11,7 +11,7 @@ public class LoggerFile {
 	
 	public static void saveLog(ConsoleArea ca, String fileName) throws IOException {
 		
-		BufferedWriter outfile = new BufferedWriter(new FileWriter(checkName(fileName) + ".txt"));
+		BufferedWriter outfile = new BufferedWriter(new FileWriter("logs/" + checkName(fileName) + ".txt"));
 	   	try {
 			outfile.write(ca.getText());
 		} catch (IOException e) {
