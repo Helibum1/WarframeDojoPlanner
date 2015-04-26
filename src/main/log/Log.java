@@ -4,7 +4,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import main.Planner;
 import main.log.console.ConsoleStream;
+import main.security.NoSuchConfigException;
+import main.security.NoSuchKeyException;
 
 public class Log {
 	
@@ -29,6 +32,17 @@ public class Log {
 	public static void setLevel(Level level) {
 		
 		CURRENT_LEVEL = level;
+	}
+	
+	public static void setDefaultLevel() {
+		Planner.getConfig().setDefault("main", "LoggerLevel", Level.DEBUG);
+		try {
+			CURRENT_LEVEL = (Level) Planner.getConfig().getEntry("main", "LoggerLevel");
+		} catch (NoSuchConfigException e) {
+			e.printStackTrace(cs);
+		} catch (NoSuchKeyException e) {
+			e.printStackTrace(cs);
+		}
 	}
 	
 	/**

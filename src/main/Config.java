@@ -1,10 +1,8 @@
 package main;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.Writer;
 import java.util.HashMap;
 
 import main.log.Log;
@@ -60,6 +58,12 @@ public class Config {
 		}
 	}
 	
+	public void setDefault(String module, String key, Object value) {
+		if (!configs.get(module).containsKey(key)) {
+			configs.get(module).put(key, value);
+		}
+	}
+	
 	public void save() {
 		Log.debug("Saving configuration...");
 		try {
@@ -75,7 +79,9 @@ public class Config {
 	
 	@SuppressWarnings("unchecked")
 	public void load() {
+		Log.info("Loading configuration...");
 		configs = (HashMap<String, HashMap<String, Object>>) xstream.fromXML(cfgfile);
+		Log.info("Configuration loaded sucessfully.");
 	}
 	
 }

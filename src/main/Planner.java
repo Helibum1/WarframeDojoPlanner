@@ -21,6 +21,7 @@ public class Planner implements Runnable {
 		} catch (NameCollisionException e) {
 			e.printStackTrace();
 		}
+		Log.setDefaultLevel();
 	}
 	
 	@Override
