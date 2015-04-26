@@ -1,7 +1,9 @@
 package main;
 
+import java.util.HashMap;
+
 import main.log.Log;
-import main.InputHandler;
+import main.security.NameCollisionException;
 
 public class Planner implements Runnable {
 	
@@ -14,7 +16,11 @@ public class Planner implements Runnable {
 
 	public Planner() {
 		cfg = new Config();
-		
+		try {
+			cfg.registerConfiguration("main", new HashMap<String, Object>());
+		} catch (NameCollisionException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@Override
@@ -48,7 +54,7 @@ public class Planner implements Runnable {
 		return inputHandler;
 	}
 	
-	public Config getConfig() {
+	public static Config getConfig() {
 		return cfg;
 	}
 	

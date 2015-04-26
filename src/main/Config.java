@@ -1,14 +1,27 @@
 package main;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.HashMap;
 
+import main.log.Log;
 import main.security.NameCollisionException;
 import main.security.NoSuchConfigException;
 import main.security.NoSuchKeyException;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
+
 public class Config {
 	
 	private HashMap<String, HashMap<String, Object>> configs;
+	
+	private XStream xstream = new XStream(new StaxDriver());
+	
+	private File cfgfile = new File("config.cfg");
 	
 	public Config() {
 		configs = new HashMap<String, HashMap<String, Object>>();
@@ -45,6 +58,24 @@ public class Config {
 		} else {
 			throw new NoSuchConfigException(module);
 		}
+	}
+	
+	public void save() {
+		Log.debug("Saving configuration...");
+		try {
+			if (!cfgfile.exists()) {
+				cfgfile.createNewFile();
+			}
+			xstream.toXML(configs, new FileOutputStream(cfgfile));
+			Log.debug("Configuration was saved sucessfully.");
+		} catch (IOException  e) {
+			e.printStackTrace(Log.cs);
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public void load() {
+		configs = (HashMap<String, HashMap<String, Object>>) xstream.fromXML(cfgfile);
 	}
 	
 }

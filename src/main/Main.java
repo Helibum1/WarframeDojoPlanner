@@ -48,6 +48,7 @@ public class Main {
 		Runtime.getRuntime().addShutdownHook(new Thread() {
 		    public void run() {
 		    	try {
+					Planner.getConfig().save();
 					ConsoleArea.save();
 				} catch (IOException e) {
 					e.printStackTrace(Log.cs);
