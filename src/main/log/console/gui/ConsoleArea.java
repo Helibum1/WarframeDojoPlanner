@@ -22,7 +22,7 @@ public class ConsoleArea extends JTextArea {
 	}
 	
 	public static void save() throws IOException {
-		LoggerFile.saveLog(ca, "log");
+		LoggerFile.saveLog(ca, "logs", "log");
 	}
 	
 }

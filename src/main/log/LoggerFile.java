@@ -12,25 +12,33 @@ import main.log.console.gui.ConsoleArea;
 
 public class LoggerFile {
 	
-	public static void saveLog(ConsoleArea ca, String fileName) throws IOException {
+	public static void saveLog(ConsoleArea ca,String folderName, String fileName) throws IOException {
 		
-		File logFolder = new File("logs");
+		File logFolder = new File(folderName);
 		if (!logFolder.isDirectory()) {
 			logFolder.mkdir();
 		}
 		
-		BufferedWriter outfile = new BufferedWriter(new FileWriter("logs/" + checkName(fileName)));
-	   	try {
-			outfile.write(ca.getText());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		switch (folderName) {
+		
+		case "logs": {
+			BufferedWriter outfile = new BufferedWriter(new FileWriter(folderName + "/" + checkNameLog(fileName)));
+		   	try {
+				outfile.write(ca.getText());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		    outfile.close();
 		}
-	    outfile.close();
+		
+		//case
+		
+		}
+		
 		
 	}
 	
-	public static String checkName(String fileName) {
+	public static String checkNameLog(String fileName) {
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("yyyy_MM_dd-HH-mm-ss");
 		String fname  = "log-" + format.format(date);
