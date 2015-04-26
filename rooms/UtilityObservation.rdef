@@ -1,7 +1,7 @@
-name:Tenno Lab
+name:Observatory
 texture:research\ResearchTenno.png
 doors:49,166
-costs:credits 1000,salvage 650,circuits 350,polymerBundle 350,forma 1,space 2,energy 5
+costs:credits 1000,ferrite 800,circuits 200,salvage 500,forma 1,space 2,energy 5
 shadow:forma 1
 storm:forma 2
 mountain:forma 5
