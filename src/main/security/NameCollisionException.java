@@ -1,5 +1,7 @@
 package main.security;
 
+import main.log.Log;
+
 public class NameCollisionException extends Exception {
 	private static final long serialVersionUID = 6747268102465609479L;
 	

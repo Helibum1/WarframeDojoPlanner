@@ -1,5 +1,7 @@
 package main.security;
 
+import main.log.Log;
+
 public class NoSuchKeyException extends Exception {
 	private static final long serialVersionUID = 301501397666829464L;
 	

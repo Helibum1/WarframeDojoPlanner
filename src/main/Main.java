@@ -3,6 +3,7 @@ package main;
 import java.awt.EventQueue;
 import java.io.IOException;
 
+import main.log.Log;
 import main.log.console.ConsoleWindow;
 import main.log.console.gui.ConsoleArea;
 import main.objects.components.Room;
@@ -10,7 +11,8 @@ import main.objects.components.Room;
 public class Main {
 
 	public static void main(String[] args) {
-
+		
+		try {
 		/*
 		 * Run the command to create the window (the JFrame) in the separate
 		 * drawing thread. In swing, all commands that draw something should be
@@ -42,18 +44,19 @@ public class Main {
 				// Start the application!
 				new Thread(planner).start();
 			}
-  });
-		final Thread mainThread = Thread.currentThread();
+		});
 		Runtime.getRuntime().addShutdownHook(new Thread() {
 		    public void run() {
 		    	try {
 					ConsoleArea.save();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					e.printStackTrace(Log.cs);
 				}
 		    }
 		});
+		}catch (Exception e) {
+			e.printStackTrace(Log.cs);
+		}
     }
 
 }
