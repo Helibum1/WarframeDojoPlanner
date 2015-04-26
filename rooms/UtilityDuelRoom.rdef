@@ -1,9 +1,9 @@
-name:Tenno Lab
+name:Duel Room
 texture:research\ResearchTenno.png
 doors:49,166
-costs:credits 1000,salvage 650,circuits 350,polymerBundle 350,forma 1,space 2,energy 5
+costs:credits 750,salvage 650,ferrite 350,nanoSpores 1200,forma 1,space 10,energy 10
 shadow:forma 1
-storm:forma 2
-mountain:forma 5
-moon:forma 15
+storm:forma 1
+mountain:forma 3
+moon:forma 5
 deco-cap:15

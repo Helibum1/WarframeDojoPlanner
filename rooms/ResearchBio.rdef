@@ -1,4 +1,4 @@
-name:Tenno Lab
+name:Bio Lab
 texture:research\ResearchTenno.png
 doors:49,166
 costs:credits 1000,salvage 650,circuits 350,polymerBundle 350,forma 1,space 2,energy 5
