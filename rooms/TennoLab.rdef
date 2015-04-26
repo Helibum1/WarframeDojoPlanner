@@ -1,0 +1,5 @@
+name:Tenno Lab
+texture:resrearch room\lab tenno.png
+doors:49,116
+costs: credits 1000,salvage 650,circuits 350,polymerbundle 350,forma 1,space 2,energy 5
+deco-cap:15

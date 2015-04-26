@@ -1,6 +1,7 @@
 package main.log;
 
 import java.awt.Color;
+import java.util.Date;
 
 import main.log.console.ConsoleStream;
 
@@ -11,6 +12,10 @@ public class Log {
 	}
 
 	private static Level CURRENT_LEVEL = Level.INFO;
+	
+	private static Date date = new Date();
+	
+	private static DateFormat format = new DateFormat("yyyy/MM/dd HH:mm:ss");
 	
 	public static final ConsoleStream cs = new ConsoleStream();
 	
@@ -58,7 +63,7 @@ public class Log {
 	 * @param message	The message to log.
 	 */
 	public static void error(String message) {
-		log(Level.ERROR, message);
+		log(Level.ERROR, System.message);
 	}
 	
 	/**
