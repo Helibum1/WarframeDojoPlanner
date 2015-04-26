@@ -37,7 +37,7 @@ public class Main {
 				Window window = new Window(planner);
 				window.setVisible(true);
 				
-				// Start the game!
+				// Start the application!
 				new Thread(planner).start();
 			}
   });

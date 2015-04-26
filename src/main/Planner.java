@@ -31,9 +31,9 @@ public class Planner implements Runnable {
 				Thread.sleep((long) (1000.0f/ACTIONS_PER_SECOND));
 				
 			} catch (InterruptedException e) {
-				// We were interrupted, exit the game loop.
+				// We were interrupted, exit the application loop.
 				
-				Log.error("Caught interruption exception, exiting game loop.");
+				Log.error("Caught interruption exception, exiting application loop.");
 				e.printStackTrace();
 				break;
 			}
