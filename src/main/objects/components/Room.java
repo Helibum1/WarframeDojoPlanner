@@ -16,7 +16,7 @@ public class Room {
 	}
 	
 	String name;
-	HashMap<String, HashMap<Material, Integer>> costs;
+	HashMap<String, HashMap<Material, Integer>> costs = new HashMap<String, HashMap<Material, Integer>>();
 	int decoCap;
 	
 	int counter = 0;
@@ -30,7 +30,7 @@ public class Room {
 		costs.put("storm", new HashMap<Material, Integer>());
 		costs.put("mountain", new HashMap<Material, Integer>());
 		costs.put("moon", new HashMap<Material, Integer>());
-		setProperties(Loader.getProperties(identifyer));
+		setProperties(Loader.getProperties(identifyer + ".rdef"));
 		Log.debug("Hashmaps set for " + identifyer);
 	}
 

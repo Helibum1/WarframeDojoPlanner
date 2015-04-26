@@ -2,9 +2,8 @@ package main;
 
 import java.awt.EventQueue;
 
-import main.Window;
 import main.log.console.ConsoleWindow;
-import main.objects.components.Loader;
+import main.objects.components.Room;
 
 public class Main {
 
