@@ -1,6 +1,6 @@
 name:Grand Hall
 texture:halls\HallGrand.png
-doors:49,166
+doors:56,0;105,29;105,82;50,104;0,77;0,24
 costs:credits 1000,alloyPlate 150,ferrite 600,rubedo 300,forma 1,space -200,energy 2
 shadow:forma 1
 storm:forma 3

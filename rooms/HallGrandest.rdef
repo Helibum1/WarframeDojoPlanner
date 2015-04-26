@@ -1,6 +1,6 @@
 name:Tenno Lab
 texture:halls\HallGrandest.png
-doors:49,166
+doors:54,0;103,28;103,82;49,105;0,76;0,23
 costs:credits 1000,alloyPlate 150,ferrite 600,rubedo 300,forma 1,space -200,energy 2
 shadow:forma 1
 storm:forma 3

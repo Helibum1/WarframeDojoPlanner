@@ -1,6 +1,6 @@
-name:Greatest Hall
-texture:halls\HallGreatest.png
-doors:49,166
+name:Greater Hall
+texture:halls\HallGreater.png
+doors:61,0;56,103
 costs:credits 1000,alloyPlate 150,ferrite 600,rubedo 300,forma 1,space -200,energy 2
 shadow:forma 1
 storm:forma 3

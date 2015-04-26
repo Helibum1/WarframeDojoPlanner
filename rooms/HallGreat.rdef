@@ -1,6 +1,6 @@
 name:Great Hall
 texture:halls\HallGreat.png
-doors:49,166
+doors:24,0;19,103
 costs:credits 1000,alloyPlate 150,ferrite 600,rubedo 300,forma 1,space -200,energy 2
 shadow:forma 1
 storm:forma 3
