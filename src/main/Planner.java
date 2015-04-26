@@ -5,6 +5,7 @@ import java.util.Set;
 
 import main.log.Log;
 import main.objects.RenderObject;
+import main.objects.components.Loader;
 import main.InputHandler;
 
 public class Planner implements Runnable {

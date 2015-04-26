@@ -9,7 +9,7 @@ public class Loader {
 	public static String[] getProperties(String identifyer) {
 		String tmp = "";
 		try {
-			BufferedReader r = new BufferedReader(new FileReader(new File(identifyer)));
+			BufferedReader r = new BufferedReader(new FileReader(new File("rooms/" + identifyer)));
 			while (r.readLine() != null) {
 				tmp += r.readLine();
 			}

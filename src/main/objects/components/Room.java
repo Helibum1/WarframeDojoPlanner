@@ -4,6 +4,8 @@ import java.awt.Point;
 import java.util.HashMap;
 import java.util.List;
 
+import main.log.Log;
+
 public class Room {
 	
 	public enum Material {
@@ -22,15 +24,18 @@ public class Room {
 	
 	
 	public Room(String identifyer) {
+		Log.info("Setting up HashMap for " + identifyer);
 		costs.put("ghost", new HashMap<Material, Integer>());
 		costs.put("shadow", new HashMap<Material, Integer>());
 		costs.put("storm", new HashMap<Material, Integer>());
 		costs.put("mountain", new HashMap<Material, Integer>());
 		costs.put("moon", new HashMap<Material, Integer>());
 		setProperties(Loader.getProperties(identifyer));
+		Log.info("Hashmaps set for " + identifyer);
 	}
 
 	void setProperties(String[] properties) {
+		Log.info("Setting properties");
 		for (int i = 0; i < properties.length; i++) {
 			switch (properties[i].split(":")[0]) {
 			case "name": name = properties[i].split(":")[1];break;
@@ -43,6 +48,7 @@ public class Room {
 			case "moon": override("moon", properties[i].split(":")[1]);break;
 			}
 		}
+		Log.info("Properties set");
 	}
 	
 	void override(String level, String str) {
@@ -50,14 +56,17 @@ public class Room {
 	}
 	
 	void setDoors(String str) {
+		Log.info("Setting door-coords");
 		String[] arr = str.split(";");
 		doors.clear();
 		for (String arst : arr) {
 			doors.add(new Point(Integer.parseInt(arst.split(",")[0]), Integer.parseInt(arst.split(",")[1])));
 		}
+		Log.info("Door-coords set");
 	}
 	
 	void setCosts(String str) {
+		Log.info("Setting costs");
 		String[] arr = str.split(",");
 		costs.get("ghost").clear();
 		costs.get("shadow").clear();
@@ -79,6 +88,7 @@ public class Room {
 		for (String tmp : arr) {
 			costs.get("moon").put(Material.valueOf(tmp.split(" ")[0]), Integer.parseInt(tmp.split(" ")[1])*100);
 		}
+		Log.info("Costs set");
 	}
 	
 	public String getName() {
