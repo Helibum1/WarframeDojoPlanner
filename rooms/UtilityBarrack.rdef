@@ -1,6 +1,6 @@
 name:Barrack
 texture:utility\UtilityBarrack.png
-doors:49,166
+doors:36,0
 costs:credits 300,alloyPlate 500,ferrite 180,rubedo 90,forma 1,space 1,energy 1
 shadow:forma 1
 storm:forma 1

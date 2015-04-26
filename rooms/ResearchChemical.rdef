@@ -1,6 +1,6 @@
 name:Chemical Lab
 texture:research\ResearchChemical.png
-doors:49,166
+doors:19,50
 costs:credits 1000,salvage 650,circuits 350,polymerBundle 350,forma 1,space 2,energy 5
 shadow:forma 1
 storm:forma 2

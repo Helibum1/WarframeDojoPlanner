@@ -1,6 +1,6 @@
 name:Orokin Lab
 texture:research\ResearchOrokin.png
-doors:49,166
+doors:20,77
 costs:credits 1000,salvage 800,circuits 350,polymerBundle 350,forma 1,space 2,energy 5
 shadow:forma 1
 storm:forma 2

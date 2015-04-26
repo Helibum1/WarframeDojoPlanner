@@ -1,6 +1,6 @@
 name:Bio Lab
 texture:research\ResearchBio.png
-doors:49,166
+doors:17,41
 costs:credits 1000,salvage 650,circuits 350,polymerBundle 350,forma 1,space 2,energy 5
 shadow:forma 1
 storm:forma 2

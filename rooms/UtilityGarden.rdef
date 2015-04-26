@@ -1,6 +1,6 @@
 name:Small Garden
 texture:utility\UtilityGarden.png
-doors:49,166
+doors:26,0;51,29;22,51;0,22
 costs:credits 750,salvage 650,ferrite 550,nanoSpores 2000,forma 1,space 10,energy 6
 shadow:forma 1
 storm:forma 1

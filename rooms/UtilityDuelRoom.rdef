@@ -1,6 +1,6 @@
 name:Duel Room
 texture:utility\UtilityDuelRoom.png
-doors:49,166
+doors:21,51
 costs:credits 750,salvage 650,ferrite 350,nanoSpores 1200,forma 1,space 10,energy 10
 shadow:forma 1
 storm:forma 1
