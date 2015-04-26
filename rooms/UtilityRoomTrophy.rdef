@@ -1,9 +1,10 @@
-name:Temple of Honor
-texture:utility\UtilityRoomTrophy.png
-doors:52,0;98,52;46,99;0,47
-costs:credits 1000,ferrite 800,circuits 200,alloyPlate 150,forma 1,space 2,energy 5
-shadow:forma 1
-storm:forma 2
-mountain:forma 5
-moon:forma 15
-deco-cap:50
+#name:Temple of Honor
+#texture:utility\UtilityRoomTrophy.png
+#doors:52,0;98,52;46,99;0,47
+#costs:credits 1000,ferrite 800,circuits 200,alloyPlate 150,forma 1,space 2,energy 5
+#shadow:forma 1
+#storm:forma 2
+#mountain:forma 5
+#moon:forma 15
+#deco-cap:50
+#

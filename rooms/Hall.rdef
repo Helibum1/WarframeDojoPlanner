@@ -1,9 +1,10 @@
-name:Hall
-texture:halls\Hall.png
-doors:25,0;20,150
-costs:credits 1000,alloyPlate 150,ferrite 600,rubedo 300,forma 1,space -200,energy 2
-shadow:forma 1
-storm:forma 3
-mountain:forma 8
-moon:forma 25
-deco-cap:60
+#name:Hall
+#texture:halls\Hall.png
+#doors:25,0;20,150
+#costs:credits 1000,alloyPlate 150,ferrite 600,rubedo 300,forma 1,space -200,energy 2
+#shadow:forma 1
+#storm:forma 3
+#mountain:forma 8
+#moon:forma 25
+#deco-cap:60
+#

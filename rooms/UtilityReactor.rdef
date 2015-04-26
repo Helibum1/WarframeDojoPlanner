@@ -1,9 +1,10 @@
-name:Reactor
-texture:utility\UtilityReactor.png
-doors:20,49
-costs:credits 500,salvage 650,circuits 350,alloyPlate 150,forma 1,space 2,energy 5
-shadow:forma 1
-storm:forma 1
-mountain:forma 1
-moon:forma 5
-deco-cap:15
+#name:Reactor
+#texture:utility\UtilityReactor.png
+#doors:20,49
+#costs:credits 500,salvage 650,circuits 350,alloyPlate 150,forma 1,space 2,energy 5
+#shadow:forma 1
+#storm:forma 1
+#mountain:forma 1
+#moon:forma 5
+#deco-cap:15
+#

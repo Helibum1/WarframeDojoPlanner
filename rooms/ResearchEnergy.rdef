@@ -1,9 +1,10 @@
-name:Energy Lab
-texture:research\ResearchEnergy.png
-doors:18,43
-costs:credits 1000,salvage 650,circuits 350,polymerBundle 350,forma 1,space 2,energy 5
-shadow:forma 1
-storm:forma 2
-mountain:forma 5
-moon:forma 15
-deco-cap:15
+#name:Energy Lab
+#texture:research\ResearchEnergy.png
+#doors:18,43
+#costs:credits 1000,salvage 650,circuits 350,polymerBundle 350,forma 1,space 2,energy 5
+#shadow:forma 1
+#storm:forma 2
+#mountain:forma 5
+#moon:forma 15
+#deco-cap:15
+#

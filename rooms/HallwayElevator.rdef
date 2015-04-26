@@ -1,9 +1,10 @@
-name:Elevator
-texture:
-doors:5,32
-costs:credits 500,salvage 650,ferrite 350,nanoSpores 1200,forma 1,space 1,energy 1
-shadow:forma 1
-storm:forma 1
-mountain:forma 1
-moon:forma 1
-deco-cap:15
+#name:Elevator
+#texture:
+#doors:5,32
+#costs:credits 500,salvage 650,ferrite 350,nanoSpores 1200,forma 1,space 1,energy 1
+#shadow:forma 1
+#storm:forma 1
+#mountain:forma 1
+#moon:forma 1
+#deco-cap:15
+#

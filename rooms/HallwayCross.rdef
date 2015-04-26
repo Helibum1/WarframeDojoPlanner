@@ -1,9 +1,10 @@
-name:Hallway Crossing
-texture:hallway\HallwayCross.png
-doors:27,0;49,27;22,50;0,23
-costs:credits 500,salvage 650,ferrite 350,nanoSpores 1200,forma 1,space 10,energy 3
-shadow:forma 1
-storm:forma 1
-mountain:forma 1
-moon:forma 1
-deco-cap:15
+#name:Hallway Crossing
+#texture:hallway\HallwayCross.png
+#doors:27,0;49,27;22,50;0,23
+#costs:credits 500,salvage 650,ferrite 350,nanoSpores 1200,forma 1,space 10,energy 3
+#shadow:forma 1
+#storm:forma 1
+#mountain:forma 1
+#moon:forma 1
+#deco-cap:15
+#

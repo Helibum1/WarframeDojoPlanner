@@ -1,9 +1,10 @@
-name:Large Garden
-texture:utility\UtilityGardenNew.png
-doors:50,0;94,52;45,98;0,46
-costs:credits 1000,salvage 850,ferrite 750,nanoSpores 2500,forma 1,space 15,energy 8
-shadow:forma 1
-storm:forma 1
-mountain:forma 2
-moon:forma 55
-deco-cap:30
+#name:Large Garden
+#texture:utility\UtilityGardenNew.png
+#doors:50,0;94,52;45,98;0,46
+#costs:credits 1000,salvage 850,ferrite 750,nanoSpores 2500,forma 1,space 15,energy 8
+#shadow:forma 1
+#storm:forma 1
+#mountain:forma 2
+#moon:forma 55
+#deco-cap:30
+#
