@@ -1,6 +1,8 @@
 package main.log;
 
 import java.awt.Color;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import main.log.console.ConsoleStream;
@@ -15,7 +17,7 @@ public class Log {
 	
 	private static Date date = new Date();
 	
-	private static DateFormat format = new DateFormat("yyyy/MM/dd HH:mm:ss");
+	private static DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	
 	public static final ConsoleStream cs = new ConsoleStream();
 	
@@ -63,7 +65,7 @@ public class Log {
 	 * @param message	The message to log.
 	 */
 	public static void error(String message) {
-		log(Level.ERROR, System.message);
+		log(Level.ERROR, "[ERROR][" + format.format(date).split(" ")[1] + "]" + message);
 	}
 	
 	/**
@@ -73,7 +75,7 @@ public class Log {
 	 * @param message	The message to log.
 	 */
 	public static void warning(String message) {
-		log(Level.WARNING, message);
+		log(Level.WARNING, "[WARNING][" + format.format(date).split(" ")[1] + "]" + message);
 	}
 	
 	/**
@@ -83,7 +85,7 @@ public class Log {
 	 * @param message	The message to log.
 	 */
 	public static void info(String message) {
-		log(Level.INFO, message);
+		log(Level.INFO, "[INFO][" + format.format(date).split(" ")[1] + "]" + message);
 	}
 	
 	/**
@@ -93,7 +95,7 @@ public class Log {
 	 * @param message	The message to log.
 	 */
 	public static void debug(String message) {
-		log(Level.DEBUG, message);
+		log(Level.DEBUG, "[DEBUG][" + format.format(date).split(" ")[1] + "]" + message);
 	}
 	
 }

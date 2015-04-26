@@ -10,6 +10,9 @@ public class Room {
 	public Room(String identifyer) {
 		setProperties(Loader.getProperties(identifyer));
 	}
+
+	private void setProperties(String[] properties) {
+	}
 	
 }
 
