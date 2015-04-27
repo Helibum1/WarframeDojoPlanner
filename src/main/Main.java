@@ -33,8 +33,6 @@ public class Main {
 		        });
 				
 				
-				//Update.Updater();
-				
 				
 				// Create the Game object.
 				Planner planner = new Planner();
