@@ -1,12 +1,17 @@
 package main.objects.components;
 
+import java.awt.Image;
 import java.awt.Point;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import main.log.Log;
+import main.objects.Grid;
 
 public class Room {
+	
+	public final String identifyer;
 	
 	public enum Material {
 		credits, alloyPlate, circuits, controlModules, ferrite, gallium, morphics, neuralSensors, 
@@ -15,16 +20,32 @@ public class Room {
 		space, energy
 	}
 	
+	long id;
+	
+	Grid grid;
+	
+	Room attachedTo = null;
+	
 	String name;
 	HashMap<String, HashMap<Material, Integer>> costs = new HashMap<String, HashMap<Material, Integer>>();
 	int decoCap;
 	
 	int counter = 0;
-	List<Point> doors;
+	List<Door> doors;
+	
+	Image img;
+	
+	Dependency dependencies;
+	
+	int x = 0, y = 0;
 	
 	
-	public Room(String identifyer) {
-		Log.debug("Setting up HashMap for " + identifyer);
+	public Room(String identifyer, Grid grid, Room attachedTo) {
+		this.identifyer = identifyer;
+		this.grid = grid;
+		this.doors = new ArrayList<Door>();
+		id = grid.getRooms().size();
+		Log.debug("Setting up HashMap for '" + identifyer + "' with roomid " + id);
 		costs.put("ghost", new HashMap<Material, Integer>());
 		costs.put("shadow", new HashMap<Material, Integer>());
 		costs.put("storm", new HashMap<Material, Integer>());
@@ -32,6 +53,8 @@ public class Room {
 		costs.put("moon", new HashMap<Material, Integer>());
 		setProperties(Loader.getProperties(identifyer + ".rdef"));
 		Log.debug("Hashmaps set for " + identifyer);
+		this.attachedTo = attachedTo;
+		Log.info("Attached '" + this.getName() + "' to '" + attachedTo.getName() + "'");
 	}
 
 	void setProperties(String[] properties) {
@@ -46,6 +69,8 @@ public class Room {
 			case "shadow": override("shadow", properties[i].split(":")[1]);break;
 			case "mountain": override("mountain", properties[i].split(":")[1]);break;
 			case "moon": override("moon", properties[i].split(":")[1]);break;
+			case "dependencies": dependencies = new Dependency("energy:" + costs.get(Material.energy)
+					, "space:" + costs.get(Material.space), properties[1].split(":")[1].split(";"));
 			}
 		}
 		Log.debug("Properties set");
@@ -60,7 +85,7 @@ public class Room {
 		String[] arr = str.split(";");
 		doors.clear();
 		for (String arst : arr) {
-			doors.add(new Point(Integer.parseInt(arst.split(",")[0]), Integer.parseInt(arst.split(",")[1])));
+			doors.add(new Door(Integer.parseInt(arst.split(",")[0]), Integer.parseInt(arst.split(",")[1])));
 		}
 		Log.debug("Door-coords set");
 	}
@@ -99,7 +124,7 @@ public class Room {
 		return decoCap;
 	}
 	
-	public Point getNextDoor() {
+	public Door getNextDoor() {
 		counter++;
 		if (counter >= doors.size() || counter < 0) {
 			counter = 0;
@@ -107,9 +132,34 @@ public class Room {
 		return doors.get(counter);
 	}
 	
-	public Point getDefaultDoor() {
+	public Door getDoor(int index) {
+		return doors.get(index);
+	}
+	
+	public Dependency getDependencies() {
+		return dependencies;
+	}
+	
+	public Door getDefaultDoor() {
 		counter = 0;
 		return doors.get(counter);
+	}
+
+	public Image getImage() {
+		return null;
+	}
+	
+	public Point getPos() {
+		return new Point(x, y);
+	}
+	
+	public boolean checkDestruction() {
+		for (Door d : doors) {
+			if (d.isOccupied()) {
+				return false;
+			}
+		}
+		return true;
 	}
 	
 }

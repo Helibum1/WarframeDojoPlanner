@@ -42,8 +42,6 @@ public class Canvas extends JPanel {
 
 	public void paintComponent(Graphics g) {
 
-		Log.finest("Painting the canvas.");
-
 		// Let the swing framework do it's drawing of the JPanel first.
 		super.paintComponent(g);
 

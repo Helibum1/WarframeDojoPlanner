@@ -6,6 +6,7 @@ import java.awt.KeyboardFocusManager;
 import java.awt.event.KeyEvent;
 
 import javax.swing.JFrame;
+import javax.swing.UIManager;
 
 import main.log.Log;
 
@@ -16,6 +17,12 @@ public class Window extends JFrame {
 
 
 	public Window(Planner planner) {
+		
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (Exception e) {
+			e.printStackTrace(Log.cs);
+		}
 
 		// Set the title of the JFrame (swing function).
 		setTitle(TITLE);

@@ -1,5 +1,6 @@
 package main.log;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,6 +23,8 @@ public class Log {
 	private static DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	
 	public static final ConsoleStream cs = new ConsoleStream();
+	
+	private static LoggerFile fullLog = new LoggerFile("full-logs");
 	
 	/**
 	 * Set the level of this logger.
@@ -55,6 +58,12 @@ public class Log {
 	 *            The message to log.
 	 */
 	public static void log(Level level, String message) {
+		
+		try {
+			fullLog.getFullWriter().append(message + "\n");
+		} catch (IOException e) {
+			e.printStackTrace(cs);
+		}
 		
 		if (CURRENT_LEVEL.ordinal() <= level.ordinal()) {
 			cs.println(message);

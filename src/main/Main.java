@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import java.io.IOException;
 
 import main.log.Log;
+import main.log.LoggerFile;
 import main.log.console.ConsoleWindow;
 import main.log.console.gui.ConsoleArea;
 
@@ -48,6 +49,7 @@ public class Main {
 		    public void run() {
 		    	try {
 					Planner.getConfig().save();
+					LoggerFile.closeSteam();
 					ConsoleArea.save();
 				} catch (IOException e) {
 					e.printStackTrace(Log.cs);
