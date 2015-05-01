@@ -13,13 +13,6 @@ public class Room {
 	
 	public final String identifyer;
 	
-	public enum Material {
-		credits, alloyPlate, circuits, controlModules, ferrite, gallium, morphics, neuralSensors, 
-		neurodes, orokinCells, rubedo, salvage, plastids, nanoSpores,  polymerBundle, argonCrystal, cryotic, 
-		oxium, tellurium, detoniteAmpule, fieldronSample, mutagenSample, fieldron, mutagenMass, 
-		space, energy
-	}
-	
 	long id;
 	
 	Grid grid;
