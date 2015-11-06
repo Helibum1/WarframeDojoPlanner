@@ -24,16 +24,29 @@ public class Grid extends JPanel {
 		
 	}
 	
+	/**
+	 * Adds a new room to this grid
+	 * @param r The room to be added
+	 * @param attachedTo The room the room r is connected to
+	 * @param doorIndex The door-index of the door of the existing room to which the room r is attached to
+	 */
 	public void addRoom(Room r, Room attachedTo, int doorIndex) {
 		rooms.add(r);
 		dependencies.add(r.getDependencies());
 		attachedTo.getDoor(doorIndex).attach(r);
 	}
 	
+	/**
+	 * Getter for a list containing all rooms on this grid
+	 * @return A list containing all rooms on this grid
+	 */
 	public List<Room> getRooms() {
 		return rooms;
 	}
 	
+	/**
+	 * Redraws every room on the grid
+	 */
 	public void redraw() {
 		for (Room r : rooms) {
 			background.getGraphics().drawImage(r.getImage(), r.getPos().x, r.getPos().y, this);

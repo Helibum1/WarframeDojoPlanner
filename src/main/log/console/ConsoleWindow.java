@@ -28,6 +28,9 @@ public class ConsoleWindow extends JFrame {
 		initGUI();
 	}
 	
+	/**
+	 * Initializes the GUI of the console
+	 */
 	private void initGUI() {
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setPreferredSize(new Dimension(500, 300));

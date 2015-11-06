@@ -37,6 +37,9 @@ public class Log {
 		CURRENT_LEVEL = level;
 	}
 	
+	/**
+	 * Set the default log-level according to the value set in the config file
+	 */
 	public static void setDefaultLevel() {
 		Planner.getConfig().setDefault("main", "LoggerLevel", Level.DEBUG);
 		try {

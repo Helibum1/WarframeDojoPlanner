@@ -21,6 +21,10 @@ public class ConsoleArea extends JTextArea {
 		
 	}
 	
+	/**
+	 * Saves the content of the console to a log
+	 * @throws IOException
+	 */
 	public static void save() throws IOException {
 		LoggerFile.saveLog(ca, "logs", "log");
 	}
