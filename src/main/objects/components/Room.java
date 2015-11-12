@@ -30,6 +30,8 @@ public class Room {
 	
 	Dependency dependencies;
 	
+	int Rotation = 0;
+	
 	int x = 0, y = 0;
 	
 	
