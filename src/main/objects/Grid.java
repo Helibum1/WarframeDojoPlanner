@@ -20,7 +20,7 @@ public class Grid extends JPanel {
 	private GridDependency dependencies = new GridDependency();
 	
 	public Grid() {
-		addRoom(new Room("Hall", this, null), null, -1);
+		addRoom(new Room("Hall", this, null), -1);
 	}
 	
 	/**
@@ -29,11 +29,11 @@ public class Grid extends JPanel {
 	 * @param attachedTo The room the room r is connected to
 	 * @param doorIndex The door-index of the door of the existing room to which the room r is attached to
 	 */
-	public void addRoom(Room r, Room attachedTo, int doorIndex) {
+	public void addRoom(Room r, int doorIndex) {
 		rooms.add(r);
 		dependencies.add(r.getDependencies());
 		try {
-			attachedTo.getDoor(doorIndex).attach(r);
+			r.getParent().getDoor(doorIndex).attach(r);
 		} catch(NullPointerException e) {
 			if (!(r.getName()=="Hall")) {
 				e.printStackTrace();

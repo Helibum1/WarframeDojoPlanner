@@ -119,6 +119,10 @@ public class Room {
 		return decoCap;
 	}
 	
+	public Room getParent() {
+		return attachedTo;
+	}
+	
 	public Door getNextDoor() {
 		counter++;
 		if (counter >= doors.size() || counter < 0) {
