@@ -20,7 +20,7 @@ public class Grid extends JPanel {
 	private GridDependency dependencies = new GridDependency();
 	
 	public Grid() {
-		addRoom();
+		addRoom(new Room("Hall", this, null), null, -1);
 	}
 	
 	/**
@@ -36,7 +36,7 @@ public class Grid extends JPanel {
 			attachedTo.getDoor(doorIndex).attach(r);
 		} catch(NullPointerException e) {
 			if (!(r.getName()=="Hall")) {
-				e.printStackStrace();
+				e.printStackTrace();
 			}
 		}
 	}
